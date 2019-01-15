@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~normalize.css"; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+html, body { height: 100%; }
+body { --vert-gradient-primary: linear-gradient(to right,#8e54e9,#4776e6);
+  --vert-gradient-primary-reverse: linear-gradient(to bottom,#8e54e9, #4776e6);
+  /* --vert-gradient-primary-reverse: linear-gradient(to bottom, #d134d6,#801542); */
+  --vert-gradient-primary-fallback: #373b44;
+  margin: 0%;
+ }

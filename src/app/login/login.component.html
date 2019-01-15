@@ -1,0 +1,22 @@
+<div style="text-align: center" fxLayout="column" layout-alaign="center center">
+  <div class="loginpage">
+        <h3 style="padding-right: 100px;">LOGIN</h3>
+        <form #userForm='ngForm'>
+        <mat-form-field class="form-group">
+            <input style="padding-right: 40px" type="email" name="email" matInput required placeholder="Email" [(ngModel)]="loginData.email" #email='ngModel' class="form-control" [class.is-invalid]="email.invalid && email.touched">
+        </mat-form-field><br>
+        <mat-form-field class="form-group">
+         <input style="padding-right: 30px" type="password" name="password" [type]="pass ? 'text':'password'"  matInput required placeholder="Password" [(ngModel)]="loginData.password" #password='ngModel' class="form-control" [class.is-invalid]="password.invalid && password.touched">
+      </mat-form-field><br>
+      <button mat-button>
+        <mat-icon *ngIf= "pass" (click)="text()" title="password visibility" aria-label="true"> visibility</mat-icon>
+        <mat-icon mat-button *ngIf="!pass" (click)="text()" title="password visibility_off" aria-label="true"> visibility_off</mat-icon><br>
+        <mat-icon  (click)="text()" title="password" aria-label="true">login</mat-icon>
+      </button>
+      <br>
+      <button type="button" mat-raised-button role="none" aria-label="true" color="accent" [disabled]="!userForm.valid">
+          LOGIN
+     </button ><br><br>
+    </form>
+  </div><br>
+</div>

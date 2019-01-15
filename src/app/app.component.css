@@ -1,0 +1,25 @@
+.toolbar {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: var(--vert-gradient-primary-fallback);
+  background: var(--vert-gradient-primary) !important;
+
+  /* float: right; */
+}
+mat-sidenav-container{
+  position: relative;
+  top: 64px;
+  min-height: 100vh;
+
+}
+mat-sidenav {
+  width: 15%;
+  height: 100%;
+  background: var(--vert-gradient-primary-fallback);
+  background: var(--vert-gradient-primary-reverse) !important
+}
+.navbar{
+  flex:1 1 auto;
+}
+

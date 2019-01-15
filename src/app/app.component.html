@@ -1,0 +1,30 @@
+<div>
+  <mat-toolbar class="toolbar mat-elevation-z9">
+    <button mat-icon-button  (click)='sidenav.toggle()'>
+      <mat-icon>menu</mat-icon>
+    </button>
+      <h1>Menu</h1>
+      <span class="navbar"></span>
+    <span></span>
+  </mat-toolbar>
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav mode='side' [opened]="true">
+      <mat-nav-list>
+          <ng-container>
+
+              <a mat-list-item routerLink="/" ><mat-icon title="Home" aria-label="true" role="none" >home</mat-icon >Home</a><br>
+              <a mat-list-item *ngIf="!toggle"  routerLink="/signup" ><mat-icon title="Signup" aria-label="true" role="none">verified_user</mat-icon>Signup</a><br>
+
+              <a mat-list-item *ngIf="!toggle" routerLink="/login" aria-label="true"><mat-icon aria-label="true" role="none">verified_user</mat-icon>Login</a><br>
+
+              <a mat-list-item  title="logout" >
+              <mat-icon aria-label="true" role="none">power_settings_new</mat-icon>Logout</a>
+
+          </ng-container>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
